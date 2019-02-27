@@ -1,0 +1,20 @@
+{
+    "dependencies": {},
+    "description": "Add support for XMC4700 Relax Kit",
+    "fullname": "board.zerynth.xmc4700_relaxkit",
+    "git_pointer": "zerynth://zerynth-boards/xmc4700_relaxkit",
+    "info": {
+        "board": "XMC4700 Relax Kit",
+        "chip_manufacturer": "Infineon",
+        "device": "xmc4700",
+        "family_type": "ARM Cortex M4"
+    },
+    "keywords": [
+        "board",
+        "infineon"
+    ],
+    "repo": "official",
+    "title": "Infineon XMC4700 Relax Kit Board Support Package",
+    "version": "r2.2.0",
+    "whatsnew": ""
+}

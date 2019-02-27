@@ -1,1 +1,0 @@
-# board-zerynth-xmc4700_relaxkit
