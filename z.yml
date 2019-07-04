@@ -1,0 +1,13 @@
+---
+description: Add support for XMC4700 Relax Kit
+fullname: board.zerynth.xmc4700_relaxkit
+info:
+    board: XMC4700 Relax Kit
+    chip_manufacturer: Infineon
+    device: xmc4700
+    family_type: ARM Cortex M4
+keywords:
+- board
+- infineon
+title: Infineon XMC4700 Relax Kit Board Support Package
+...

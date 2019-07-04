@@ -149,11 +149,12 @@ const PinClass const _analogclass[] STORED = {
 
 const PinClass const _spiclass[] STORED = {
     /* pin_num, spi, tx=alt.fn <or> rx=DXn, DX.<CHAR> (for rx pins) */
+    /* Note: spi is (USIC*2 + CHANNEL) */
 
     /* USIC1 CH0 */
-    /* MOSI0 */ MAKE_PIN_CLASS(18, 0, 2, 0),
-    /* MISO0 */ MAKE_PIN_CLASS(21, 0, 0, 0),
-    /* SCLK0 */ MAKE_PIN_CLASS(17, 0, 2, 0),
+    /* MOSI0 */ MAKE_PIN_CLASS(18, 2, 2, 0),
+    /* MISO0 */ MAKE_PIN_CLASS(21, 2, 0, 0),
+    /* SCLK0 */ MAKE_PIN_CLASS(17, 2, 2, 0),
 
     /* USIC0 CH1 */
     /* MOSI1 */ MAKE_PIN_CLASS(49, 1, 2, 0),
@@ -161,39 +162,39 @@ const PinClass const _spiclass[] STORED = {
     /* SCLK1 */ MAKE_PIN_CLASS(47, 1, 2, 0),
 
     /* USIC1 CH1 */
-    /* MOSI2 */ MAKE_PIN_CLASS(22, 2, 2, 0),
-    /* MISO2 */ MAKE_PIN_CLASS(25, 2, 0, 3),
-    /* SCLK2 */ MAKE_PIN_CLASS(24, 2, 2, 0),
+    /* MOSI2 */ MAKE_PIN_CLASS(22, 3, 2, 0),
+    /* MISO2 */ MAKE_PIN_CLASS(25, 3, 0, 3),
+    /* SCLK2 */ MAKE_PIN_CLASS(24, 3, 2, 0),
 
     /* USIC2 CH0 */
-    /* MOSI3 */ MAKE_PIN_CLASS(11, 3, 1, 0),
-    /* MISO3 */ MAKE_PIN_CLASS(12, 3, 0, 2),
-    /* SCLK3 */ MAKE_PIN_CLASS(13, 3, 1, 0),
+    /* MOSI3 */ MAKE_PIN_CLASS(11, 4, 1, 0),
+    /* MISO3 */ MAKE_PIN_CLASS(12, 4, 0, 2),
+    /* SCLK3 */ MAKE_PIN_CLASS(13, 4, 1, 0),
 
     /* USIC2 CH1 */
-    /* MOSI4 */ MAKE_PIN_CLASS(36, 4, 1, 0),
-    /* MISO4 */ MAKE_PIN_CLASS(35, 4, 0, 3),
-    /* SCLK4 */ MAKE_PIN_CLASS(34, 4, 1, 0),
+    /* MOSI4 */ MAKE_PIN_CLASS(36, 5, 1, 0),
+    /* MISO4 */ MAKE_PIN_CLASS(35, 5, 0, 3),
+    /* SCLK4 */ MAKE_PIN_CLASS(34, 5, 1, 0),
 };
 
 const PinClass const _i2cclass[] STORED = {
     /* pin_num, i2c, alt.fn, DXn{A=0, B=1, ...}   */
-
+    /* Note: i2c is (USIC*2+CHANNEL) */
     /* USIC1 CH0 */
-    /* SDA0 */ MAKE_PIN_CLASS(18, 0, 2, 1),
-    /* SCL0 */ MAKE_PIN_CLASS(17, 0, 2, 0),
+    /* SDA0 */ MAKE_PIN_CLASS(18, 2, 2, 1),
+    /* SCL0 */ MAKE_PIN_CLASS(17, 2, 2, 0),
 
     /* USIC1 CH1 */
-    /* SDA1 */ MAKE_PIN_CLASS(14, 1, 2, 0),
-    /* SCL1 */ MAKE_PIN_CLASS(15, 1, 2, 1),
+    /* SDA1 */ MAKE_PIN_CLASS(14, 3, 2, 0),
+    /* SCL1 */ MAKE_PIN_CLASS(15, 3, 2, 1),
 
     /* USIC2 CH0 */
-    /* SDA2 */ MAKE_PIN_CLASS(53, 2, 1, 1),
-    /* SCL2 */ MAKE_PIN_CLASS(55, 2, 1, 0),
+    /* SDA2 */ MAKE_PIN_CLASS(53, 4, 1, 1),
+    /* SCL2 */ MAKE_PIN_CLASS(55, 4, 1, 0),
 
     /* USIC0 CH1 */
-    /* SDA3 */ MAKE_PIN_CLASS(34, 3, 2, 3),
-    /* SCL3 */ MAKE_PIN_CLASS(47, 3, 2, 2),
+    /* SDA3 */ MAKE_PIN_CLASS(34, 1, 2, 3),
+    /* SCL3 */ MAKE_PIN_CLASS(47, 1, 2, 2),
 };
 
 const PinClass const _pwmclass[] STORED = {
