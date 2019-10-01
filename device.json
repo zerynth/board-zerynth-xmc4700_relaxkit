@@ -1,46 +1,67 @@
 {
-    "name":"XMC4700 Relax Kit",
-    "target":"xmc4700_relaxkit",
-    "cc":"armgcc",
-    "classes":["xmc4700_relaxkit.XMC4700RelaxKit"],
-    "ram":352,
-    "flash":2048,
-    "family_type":"armcmx",
-    "family_name":"xmc4000",
-    "chip_model":"xmc4700",
+    "name": "XMC4700 Relax Kit",
+    "target": "xmc4700_relaxkit",
+    "cc": "armgcc",
+    "classes": [
+        "xmc4700_relaxkit.XMC4700RelaxKit"
+    ],
+    "ram": 352,
+    "flash": 2048,
+    "family_type": "armcmx",
+    "family_name": "xmc4000",
+    "chip_model": "xmc4700",
     "manual_reset": 0,
-    "preferred_baud":115200,
-    "board_producer":"Infineon",
-    "chip_manifacturer":"Infineon",
-    "architecture":"cortex-m4",
-    "gccopts":{
-        "arch": ["cortex-m4", "-mthumb"],
-        "cflags": ["-mcpu=cortex-m4","-mthumb", "-O2","-fomit-frame-pointer","-falign-functions=16","-ffunction-sections", "-fdata-sections", "-fno-common", "-Wall", "-Wextra", "-Wstrict-prototypes","-nostdlib","-std=c99"],
-        "defs": ["VM_DEFAULT_THREAD_SIZE=4096"]
+    "preferred_baud": 115200,
+    "board_producer": "Infineon",
+    "chip_manifacturer": "Infineon",
+    "architecture": "cortex-m4",
+    "gccopts": {
+        "arch": [
+            "-mcpu=cortex-m4",
+            "-mthumb"
+        ],
+        "cflags": [
+            "-mcpu=cortex-m4",
+            "-mthumb",
+            "-O2",
+            "-fomit-frame-pointer",
+            "-falign-functions=16",
+            "-ffunction-sections",
+            "-fdata-sections",
+            "-fno-common",
+            "-Wall",
+            "-Wextra",
+            "-Wstrict-prototypes",
+            "-nostdlib",
+            "-std=c99"
+        ],
+        "defs": [
+            "VM_DEFAULT_THREAD_SIZE=4096"
+        ]
     },
-    "relocator":"cortex-m",
+    "relocator": "cortex-m",
     "vm_chunk": 256,
-    "type":"board",
-    "virtualizable":"XMC4700RelaxKit",
+    "type": "board",
+    "virtualizable": "XMC4700RelaxKit",
     "uplink_reset": "reset",
-    "jtag_target":"xmc4xxx.cfg",
+    "jtag_target": "xmc4xxx.cfg",
     "jtag_capable": 2,
-    "jtag_class":"XMC4700RelaxKit",
+    "jtag_class": "XMC4700RelaxKit",
     "jtag_chipid_command": "reset halt; mdw 0x20000000; mdw 0x20000004; mdw 0x20000008; mdw 0x2000000c",
-    "jtag_chipid_len":4,
-    "jtag_chipid_prefix":"0x2000",
+    "jtag_chipid_len": 4,
+    "jtag_chipid_prefix": "0x2000",
     "jtag_timeout": 180,
     "jtag_burn_end": "reset; resume",
     "jtag_target_options": "transport select swd; set CHIPNAME xmc4700",
-    "bytecode_offset":"0xC020000",
-    "vmstore_offset":"0xC01f000",
-    "vm_start":"0xC000000",
-    "connection":{
-        "baudrate":115200,
-        "parity":"n",
-        "bytesize":8,
-        "stopbits":1,
-        "dsrdtr":false,
-        "rtscts":false
+    "bytecode_offset": "0xC020000",
+    "vmstore_offset": "0xC01f000",
+    "vm_start": "0xC000000",
+    "connection": {
+        "baudrate": 115200,
+        "parity": "n",
+        "bytesize": 8,
+        "stopbits": 1,
+        "dsrdtr": false,
+        "rtscts": false
     }
 }
